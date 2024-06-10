@@ -6,11 +6,9 @@ async function main() {
 
   const MetaRelicNFT = await hre.ethers.getContractFactory("MetaRelicNFT");
 
-  // ✅ حتما await بزن
   const contract = await MetaRelicNFT.deploy();
 
-  // ✅ حالا این متد معتبره
-  await contract.deployed();
+  await contract.deployed()
 
   console.log("MetaRelicNFT deployed to:", contract.address);
 }
